@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.CpuMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Cpu">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="usedCpuSys" column="used_cpu_sys" jdbcType="VARCHAR"/>
+            <result property="usedCpuUser" column="used_cpu_user" jdbcType="VARCHAR"/>
+            <result property="usedCpuSysChildren" column="used_cpu_sys_children" jdbcType="VARCHAR"/>
+            <result property="usedCpuUserChildren" column="used_cpu_user_children" jdbcType="VARCHAR"/>
+            <result property="usedCpuSysMainThread" column="used_cpu_sys_main_thread" jdbcType="VARCHAR"/>
+            <result property="usedCpuUserMainThread" column="used_cpu_user_main_thread" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,used_cpu_sys,used_cpu_user,
+        used_cpu_sys_children,used_cpu_user_children,used_cpu_sys_main_thread,
+        used_cpu_user_main_thread,create_time,update_time
+    </sql>
+</mapper>

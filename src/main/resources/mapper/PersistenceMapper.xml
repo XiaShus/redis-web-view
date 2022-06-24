@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.PersistenceMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Persistence">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="loading" column="loading" jdbcType="VARCHAR"/>
+            <result property="asyncLoading" column="async_loading" jdbcType="VARCHAR"/>
+            <result property="currentCowPeak" column="current_cow_peak" jdbcType="VARCHAR"/>
+            <result property="currentCowSize" column="current_cow_size" jdbcType="DOUBLE"/>
+            <result property="currentCowSizeAge" column="current_cow_size_age" jdbcType="DOUBLE"/>
+            <result property="currentForkPerc" column="current_fork_perc" jdbcType="VARCHAR"/>
+            <result property="currentSaveKeysProcessed" column="current_save_keys_processed" jdbcType="VARCHAR"/>
+            <result property="currentSaveKeysTotal" column="current_save_keys_total" jdbcType="VARCHAR"/>
+            <result property="rdbChangesSinceLastSave" column="rdb_changes_since_last_save" jdbcType="VARCHAR"/>
+            <result property="rdbBgsaveInProgress" column="rdb_bgsave_in_progress" jdbcType="VARCHAR"/>
+            <result property="rdbLastSaveTime" column="rdb_last_save_time" jdbcType="TIMESTAMP"/>
+            <result property="rdbLastBgsaveStatus" column="rdb_last_bgsave_status" jdbcType="VARCHAR"/>
+            <result property="rdbLastBgsaveTimeSec" column="rdb_last_bgsave_time_sec" jdbcType="TIMESTAMP"/>
+            <result property="rdbCurrentBgsaveTimeSec" column="rdb_current_bgsave_time_sec" jdbcType="TIMESTAMP"/>
+            <result property="rdbLastCowSize" column="rdb_last_cow_size" jdbcType="DOUBLE"/>
+            <result property="rdbLastLoadKeysExpired" column="rdb_last_load_keys_expired" jdbcType="VARCHAR"/>
+            <result property="rdbLastLoadKeysLoaded" column="rdb_last_load_keys_loaded" jdbcType="VARCHAR"/>
+            <result property="aofEnabled" column="aof_enabled" jdbcType="VARCHAR"/>
+            <result property="aofRewriteInProgress" column="aof_rewrite_in_progress" jdbcType="VARCHAR"/>
+            <result property="aofRewriteScheduled" column="aof_rewrite_scheduled" jdbcType="VARCHAR"/>
+            <result property="aofLastRewriteTimeSec" column="aof_last_rewrite_time_sec" jdbcType="TIMESTAMP"/>
+            <result property="aofCurrentRewriteTimeSec" column="aof_current_rewrite_time_sec" jdbcType="TIMESTAMP"/>
+            <result property="aofLastBgrewriteStatus" column="aof_last_bgrewrite_status" jdbcType="VARCHAR"/>
+            <result property="aofLastWriteStatus" column="aof_last_write_status" jdbcType="VARCHAR"/>
+            <result property="aofLastCowSize" column="aof_last_cow_size" jdbcType="DOUBLE"/>
+            <result property="moduleForkInProgress" column="module_fork_in_progress" jdbcType="VARCHAR"/>
+            <result property="moduleForkLastCowSize" column="module_fork_last_cow_size" jdbcType="DOUBLE"/>
+            <result property="aofRewrites" column="aof_rewrites" jdbcType="VARCHAR"/>
+            <result property="rdbSaves" column="rdb_saves" jdbcType="VARCHAR"/>
+            <result property="aofCurrentSize" column="aof_current_size" jdbcType="DOUBLE"/>
+            <result property="aofBaseSize" column="aof_base_size" jdbcType="DOUBLE"/>
+            <result property="aofPendingRewrite" column="aof_pending_rewrite" jdbcType="VARCHAR"/>
+            <result property="aofBufferLength" column="aof_buffer_length" jdbcType="DOUBLE"/>
+            <result property="aofRewriteBufferLength" column="aof_rewrite_buffer_length" jdbcType="DOUBLE"/>
+            <result property="aofPendingBioFsync" column="aof_pending_bio_fsync" jdbcType="VARCHAR"/>
+            <result property="aofDelayedFsync" column="aof_delayed_fsync" jdbcType="VARCHAR"/>
+            <result property="loadingStartTime" column="loading_start_time" jdbcType="TIMESTAMP"/>
+            <result property="loadingTotalBytes" column="loading_total_bytes" jdbcType="VARCHAR"/>
+            <result property="loadingRdbUsedMem" column="loading_rdb_used_mem" jdbcType="VARCHAR"/>
+            <result property="loadingLoadedBytes" column="loading_loaded_bytes" jdbcType="VARCHAR"/>
+            <result property="loadingLoadedPerc" column="loading_loaded_perc" jdbcType="VARCHAR"/>
+            <result property="loadingEtaSeconds" column="loading_eta_seconds" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,loading,async_loading,
+        current_cow_peak,current_cow_size,current_cow_size_age,
+        current_fork_perc,current_save_keys_processed,current_save_keys_total,
+        rdb_changes_since_last_save,rdb_bgsave_in_progress,rdb_last_save_time,
+        rdb_last_bgsave_status,rdb_last_bgsave_time_sec,rdb_current_bgsave_time_sec,
+        rdb_last_cow_size,rdb_last_load_keys_expired,rdb_last_load_keys_loaded,
+        aof_enabled,aof_rewrite_in_progress,aof_rewrite_scheduled,
+        aof_last_rewrite_time_sec,aof_current_rewrite_time_sec,aof_last_bgrewrite_status,
+        aof_last_write_status,aof_last_cow_size,module_fork_in_progress,
+        module_fork_last_cow_size,aof_rewrites,rdb_saves,
+        aof_current_size,aof_base_size,aof_pending_rewrite,
+        aof_buffer_length,aof_rewrite_buffer_length,aof_pending_bio_fsync,
+        aof_delayed_fsync,loading_start_time,loading_total_bytes,
+        loading_rdb_used_mem,loading_loaded_bytes,loading_loaded_perc,
+        loading_eta_seconds,create_time,update_time
+    </sql>
+</mapper>

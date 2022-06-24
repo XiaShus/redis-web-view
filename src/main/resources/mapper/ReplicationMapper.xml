@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.ReplicationMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Replication">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="role" column="role" jdbcType="VARCHAR"/>
+            <result property="masterFailoverState" column="master_failover_state" jdbcType="VARCHAR"/>
+            <result property="masterReplid" column="master_replid" jdbcType="INTEGER"/>
+            <result property="masterReplid2" column="master_replid2" jdbcType="VARCHAR"/>
+            <result property="masterReplOffset" column="master_repl_offset" jdbcType="VARCHAR"/>
+            <result property="secondReplOffset" column="second_repl_offset" jdbcType="VARCHAR"/>
+            <result property="replBacklogActive" column="repl_backlog_active" jdbcType="VARCHAR"/>
+            <result property="replBacklogSize" column="repl_backlog_size" jdbcType="DOUBLE"/>
+            <result property="replBacklogFirstByteOffset" column="repl_backlog_first_byte_offset" jdbcType="VARCHAR"/>
+            <result property="replBacklogHistlen" column="repl_backlog_histlen" jdbcType="VARCHAR"/>
+            <result property="masterHost" column="master_host" jdbcType="VARCHAR"/>
+            <result property="masterPort" column="master_port" jdbcType="VARCHAR"/>
+            <result property="masterLinkStatus" column="master_link_status" jdbcType="VARCHAR"/>
+            <result property="masterLastIoSecondsAgo" column="master_last_io_seconds_ago" jdbcType="VARCHAR"/>
+            <result property="masterSyncInProgress" column="master_sync_in_progress" jdbcType="VARCHAR"/>
+            <result property="slaveReadReplOffset" column="slave_read_repl_offset" jdbcType="VARCHAR"/>
+            <result property="slaveReplOffset" column="slave_repl_offset" jdbcType="VARCHAR"/>
+            <result property="slavePriority" column="slave_priority" jdbcType="VARCHAR"/>
+            <result property="slaveReadOnly" column="slave_read_only" jdbcType="VARCHAR"/>
+            <result property="replicaAnnounced" column="replica_announced" jdbcType="VARCHAR"/>
+            <result property="masterSyncTotalBytes" column="master_sync_total_bytes" jdbcType="VARCHAR"/>
+            <result property="masterSyncReadBytes" column="master_sync_read_bytes" jdbcType="VARCHAR"/>
+            <result property="masterSyncLeftBytes" column="master_sync_left_bytes" jdbcType="VARCHAR"/>
+            <result property="masterSyncPerc" column="master_sync_perc" jdbcType="VARCHAR"/>
+            <result property="masterSyncLastIoSecondsAgo" column="master_sync_last_io_seconds_ago" jdbcType="VARCHAR"/>
+            <result property="masterLinkDownSinceSeconds" column="master_link_down_since_seconds" jdbcType="VARCHAR"/>
+            <result property="connectedSlaves" column="connected_slaves" jdbcType="VARCHAR"/>
+            <result property="minSlavesGoodSlaves" column="min_slaves_good_slaves" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,role,master_failover_state,
+        master_replid,master_replid2,master_repl_offset,
+        second_repl_offset,repl_backlog_active,repl_backlog_size,
+        repl_backlog_first_byte_offset,repl_backlog_histlen,master_host,
+        master_port,master_link_status,master_last_io_seconds_ago,
+        master_sync_in_progress,slave_read_repl_offset,slave_repl_offset,
+        slave_priority,slave_read_only,replica_announced,
+        master_sync_total_bytes,master_sync_read_bytes,master_sync_left_bytes,
+        master_sync_perc,master_sync_last_io_seconds_ago,master_link_down_since_seconds,
+        connected_slaves,min_slaves_good_slaves,create_time,
+        update_time
+    </sql>
+</mapper>

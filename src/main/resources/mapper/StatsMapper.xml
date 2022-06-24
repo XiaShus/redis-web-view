@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.StatsMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Stats">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="totalConnectionsReceived" column="total_connections_received" jdbcType="VARCHAR"/>
+            <result property="totalCommandsProcessed" column="total_commands_processed" jdbcType="VARCHAR"/>
+            <result property="instantaneousOpsPerSec" column="instantaneous_ops_per_sec" jdbcType="VARCHAR"/>
+            <result property="totalNetInputBytes" column="total_net_input_bytes" jdbcType="VARCHAR"/>
+            <result property="totalNetOutputBytes" column="total_net_output_bytes" jdbcType="VARCHAR"/>
+            <result property="totalNetReplInputBytes" column="total_net_repl_input_bytes" jdbcType="VARCHAR"/>
+            <result property="totalNetReplOutputBytes" column="total_net_repl_output_bytes" jdbcType="VARCHAR"/>
+            <result property="instantaneousInputKbps" column="instantaneous_input_kbps" jdbcType="VARCHAR"/>
+            <result property="instantaneousOutputKbps" column="instantaneous_output_kbps" jdbcType="VARCHAR"/>
+            <result property="instantaneousInputReplKbps" column="instantaneous_input_repl_kbps" jdbcType="VARCHAR"/>
+            <result property="instantaneousOutputReplKbps" column="instantaneous_output_repl_kbps" jdbcType="VARCHAR"/>
+            <result property="rejectedConnections" column="rejected_connections" jdbcType="VARCHAR"/>
+            <result property="syncFull" column="sync_full" jdbcType="VARCHAR"/>
+            <result property="syncPartialOk" column="sync_partial_ok" jdbcType="VARCHAR"/>
+            <result property="syncPartialErr" column="sync_partial_err" jdbcType="VARCHAR"/>
+            <result property="expiredKeys" column="expired_keys" jdbcType="VARCHAR"/>
+            <result property="expiredStalePerc" column="expired_stale_perc" jdbcType="VARCHAR"/>
+            <result property="expiredTimeCapReachedCount" column="expired_time_cap_reached_count" jdbcType="TIMESTAMP"/>
+            <result property="expireCycleCpuMilliseconds" column="expire_cycle_cpu_milliseconds" jdbcType="VARCHAR"/>
+            <result property="evictedKeys" column="evicted_keys" jdbcType="VARCHAR"/>
+            <result property="evictedClients" column="evicted_clients" jdbcType="VARCHAR"/>
+            <result property="totalEvictionExceededTime" column="total_eviction_exceeded_time" jdbcType="TIMESTAMP"/>
+            <result property="currentEvictionExceededTime" column="current_eviction_exceeded_time" jdbcType="TIMESTAMP"/>
+            <result property="keyspaceHits" column="keyspace_hits" jdbcType="VARCHAR"/>
+            <result property="keyspaceMisses" column="keyspace_misses" jdbcType="VARCHAR"/>
+            <result property="pubsubChannels" column="pubsub_channels" jdbcType="VARCHAR"/>
+            <result property="pubsubPatterns" column="pubsub_patterns" jdbcType="VARCHAR"/>
+            <result property="latestForkUsec" column="latest_fork_usec" jdbcType="VARCHAR"/>
+            <result property="totalForks" column="total_forks" jdbcType="VARCHAR"/>
+            <result property="migrateCachedSockets" column="migrate_cached_sockets" jdbcType="VARCHAR"/>
+            <result property="slaveExpiresTrackedKeys" column="slave_expires_tracked_keys" jdbcType="VARCHAR"/>
+            <result property="activeDefragHits" column="active_defrag_hits" jdbcType="VARCHAR"/>
+            <result property="activeDefragMisses" column="active_defrag_misses" jdbcType="VARCHAR"/>
+            <result property="activeDefragKeyHits" column="active_defrag_key_hits" jdbcType="VARCHAR"/>
+            <result property="activeDefragKeyMisses" column="active_defrag_key_misses" jdbcType="VARCHAR"/>
+            <result property="totalActiveDefragTime" column="total_active_defrag_time" jdbcType="TIMESTAMP"/>
+            <result property="currentActiveDefragTime" column="current_active_defrag_time" jdbcType="TIMESTAMP"/>
+            <result property="trackingTotalKeys" column="tracking_total_keys" jdbcType="VARCHAR"/>
+            <result property="trackingTotalItems" column="tracking_total_items" jdbcType="VARCHAR"/>
+            <result property="trackingTotalPrefixes" column="tracking_total_prefixes" jdbcType="VARCHAR"/>
+            <result property="unexpectedErrorReplies" column="unexpected_error_replies" jdbcType="VARCHAR"/>
+            <result property="totalErrorReplies" column="total_error_replies" jdbcType="VARCHAR"/>
+            <result property="dumpPayloadSanitizations" column="dump_payload_sanitizations" jdbcType="VARCHAR"/>
+            <result property="totalReadsProcessed" column="total_reads_processed" jdbcType="VARCHAR"/>
+            <result property="totalWritesProcessed" column="total_writes_processed" jdbcType="VARCHAR"/>
+            <result property="ioThreadedReadsProcessed" column="io_threaded_reads_processed" jdbcType="VARCHAR"/>
+            <result property="ioThreadedWritesProcessed" column="io_threaded_writes_processed" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,total_connections_received,total_commands_processed,
+        instantaneous_ops_per_sec,total_net_input_bytes,total_net_output_bytes,
+        total_net_repl_input_bytes,total_net_repl_output_bytes,instantaneous_input_kbps,
+        instantaneous_output_kbps,instantaneous_input_repl_kbps,instantaneous_output_repl_kbps,
+        rejected_connections,sync_full,sync_partial_ok,
+        sync_partial_err,expired_keys,expired_stale_perc,
+        expired_time_cap_reached_count,expire_cycle_cpu_milliseconds,evicted_keys,
+        evicted_clients,total_eviction_exceeded_time,current_eviction_exceeded_time,
+        keyspace_hits,keyspace_misses,pubsub_channels,
+        pubsub_patterns,latest_fork_usec,total_forks,
+        migrate_cached_sockets,slave_expires_tracked_keys,active_defrag_hits,
+        active_defrag_misses,active_defrag_key_hits,active_defrag_key_misses,
+        total_active_defrag_time,current_active_defrag_time,tracking_total_keys,
+        tracking_total_items,tracking_total_prefixes,unexpected_error_replies,
+        total_error_replies,dump_payload_sanitizations,total_reads_processed,
+        total_writes_processed,io_threaded_reads_processed,io_threaded_writes_processed,
+        create_time,update_time
+    </sql>
+</mapper>

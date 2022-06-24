@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.ServerMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Server">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="redisVersion" column="redis_version" jdbcType="VARCHAR"/>
+            <result property="redisGitSha1" column="redis_git_sha1" jdbcType="VARCHAR"/>
+            <result property="redisGitDirty" column="redis_git_dirty" jdbcType="VARCHAR"/>
+            <result property="redisBuildId" column="redis_build_id" jdbcType="INTEGER"/>
+            <result property="redisMode" column="redis_mode" jdbcType="VARCHAR"/>
+            <result property="os" column="os" jdbcType="VARCHAR"/>
+            <result property="archBits" column="arch_bits" jdbcType="VARCHAR"/>
+            <result property="multiplexingApi" column="multiplexing_api" jdbcType="VARCHAR"/>
+            <result property="atomicvarApi" column="atomicvar_api" jdbcType="VARCHAR"/>
+            <result property="gccVersion" column="gcc_version" jdbcType="VARCHAR"/>
+            <result property="processId" column="process_id" jdbcType="INTEGER"/>
+            <result property="processSupervised" column="process_supervised" jdbcType="VARCHAR"/>
+            <result property="runId" column="run_id" jdbcType="INTEGER"/>
+            <result property="tcpPort" column="tcp_port" jdbcType="VARCHAR"/>
+            <result property="serverTimeUsec" column="server_time_usec" jdbcType="TIMESTAMP"/>
+            <result property="uptimeInSeconds" column="uptime_in_seconds" jdbcType="TIMESTAMP"/>
+            <result property="uptimeInDays" column="uptime_in_days" jdbcType="TIMESTAMP"/>
+            <result property="hz" column="hz" jdbcType="VARCHAR"/>
+            <result property="configuredHz" column="configured_hz" jdbcType="VARCHAR"/>
+            <result property="lruClock" column="lru_clock" jdbcType="VARCHAR"/>
+            <result property="executable" column="executable" jdbcType="VARCHAR"/>
+            <result property="configFile" column="config_file" jdbcType="VARCHAR"/>
+            <result property="ioThreadsActive" column="io_threads_active" jdbcType="VARCHAR"/>
+            <result property="shutdownInMilliseconds" column="shutdown_in_milliseconds" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,redis_version,redis_git_sha1,
+        redis_git_dirty,redis_build_id,redis_mode,
+        os,arch_bits,multiplexing_api,
+        atomicvar_api,gcc_version,process_id,
+        process_supervised,run_id,tcp_port,
+        server_time_usec,uptime_in_seconds,uptime_in_days,
+        hz,configured_hz,lru_clock,
+        executable,config_file,io_threads_active,
+        shutdown_in_milliseconds,create_time,update_time
+    </sql>
+</mapper>

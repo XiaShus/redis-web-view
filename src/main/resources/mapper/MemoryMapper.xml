@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.MemoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Memory">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="usedMemory" column="used_memory" jdbcType="VARCHAR"/>
+            <result property="usedMemoryHuman" column="used_memory_human" jdbcType="VARCHAR"/>
+            <result property="usedMemoryRss" column="used_memory_rss" jdbcType="VARCHAR"/>
+            <result property="usedMemoryRssHuman" column="used_memory_rss_human" jdbcType="VARCHAR"/>
+            <result property="usedMemoryPeak" column="used_memory_peak" jdbcType="VARCHAR"/>
+            <result property="usedMemoryPeakHuman" column="used_memory_peak_human" jdbcType="VARCHAR"/>
+            <result property="usedMemoryPeakPerc" column="used_memory_peak_perc" jdbcType="VARCHAR"/>
+            <result property="usedMemoryOverhead" column="used_memory_overhead" jdbcType="VARCHAR"/>
+            <result property="usedMemoryStartup" column="used_memory_startup" jdbcType="VARCHAR"/>
+            <result property="usedMemoryDataset" column="used_memory_dataset" jdbcType="VARCHAR"/>
+            <result property="usedMemoryDatasetPerc" column="used_memory_dataset_perc" jdbcType="VARCHAR"/>
+            <result property="totalSystemMemory" column="total_system_memory" jdbcType="VARCHAR"/>
+            <result property="totalSystemMemoryHuman" column="total_system_memory_human" jdbcType="VARCHAR"/>
+            <result property="usedMemoryLua" column="used_memory_lua" jdbcType="VARCHAR"/>
+            <result property="usedMemoryLuaHuman" column="used_memory_lua_human" jdbcType="VARCHAR"/>
+            <result property="usedMemoryScripts" column="used_memory_scripts" jdbcType="VARCHAR"/>
+            <result property="usedMemoryScriptsHuman" column="used_memory_scripts_human" jdbcType="VARCHAR"/>
+            <result property="maxmemory" column="maxmemory" jdbcType="VARCHAR"/>
+            <result property="maxmemoryHuman" column="maxmemory_human" jdbcType="VARCHAR"/>
+            <result property="maxmemoryPolicy" column="maxmemory_policy" jdbcType="VARCHAR"/>
+            <result property="memFragmentationRatio" column="mem_fragmentation_ratio" jdbcType="VARCHAR"/>
+            <result property="memFragmentationBytes" column="mem_fragmentation_bytes" jdbcType="VARCHAR"/>
+            <result property="allocatorFragRatio" column="allocator_frag_ratio" jdbcType="VARCHAR"/>
+            <result property="allocatorFragBytes" column="allocator_frag_bytes" jdbcType="VARCHAR"/>
+            <result property="allocatorRssRatio" column="allocator_rss_ratio" jdbcType="VARCHAR"/>
+            <result property="allocatorRssBytes" column="allocator_rss_bytes" jdbcType="VARCHAR"/>
+            <result property="rssOverheadRatio" column="rss_overhead_ratio" jdbcType="VARCHAR"/>
+            <result property="rssOverheadBytes" column="rss_overhead_bytes" jdbcType="VARCHAR"/>
+            <result property="allocatorAllocated" column="allocator_allocated" jdbcType="VARCHAR"/>
+            <result property="allocatorActive" column="allocator_active" jdbcType="VARCHAR"/>
+            <result property="allocatorResident" column="allocator_resident" jdbcType="VARCHAR"/>
+            <result property="memNotCountedForEvict" column="mem_not_counted_for_evict" jdbcType="VARCHAR"/>
+            <result property="memClientsSlaves" column="mem_clients_slaves" jdbcType="VARCHAR"/>
+            <result property="memClientsNormal" column="mem_clients_normal" jdbcType="VARCHAR"/>
+            <result property="memClusterLinks" column="mem_cluster_links" jdbcType="VARCHAR"/>
+            <result property="memAofBuffer" column="mem_aof_buffer" jdbcType="VARCHAR"/>
+            <result property="memReplicationBacklog" column="mem_replication_backlog" jdbcType="VARCHAR"/>
+            <result property="memTotalReplicationBuffers" column="mem_total_replication_buffers" jdbcType="VARCHAR"/>
+            <result property="memAllocator" column="mem_allocator" jdbcType="VARCHAR"/>
+            <result property="activeDefragRunning" column="active_defrag_running" jdbcType="VARCHAR"/>
+            <result property="lazyfreePendingObjects" column="lazyfree_pending_objects" jdbcType="VARCHAR"/>
+            <result property="lazyfreedObjects" column="lazyfreed_objects" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,used_memory,used_memory_human,
+        used_memory_rss,used_memory_rss_human,used_memory_peak,
+        used_memory_peak_human,used_memory_peak_perc,used_memory_overhead,
+        used_memory_startup,used_memory_dataset,used_memory_dataset_perc,
+        total_system_memory,total_system_memory_human,used_memory_lua,
+        used_memory_lua_human,used_memory_scripts,used_memory_scripts_human,
+        maxmemory,maxmemory_human,maxmemory_policy,
+        mem_fragmentation_ratio,mem_fragmentation_bytes,allocator_frag_ratio,
+        allocator_frag_bytes,allocator_rss_ratio,allocator_rss_bytes,
+        rss_overhead_ratio,rss_overhead_bytes,allocator_allocated,
+        allocator_active,allocator_resident,mem_not_counted_for_evict,
+        mem_clients_slaves,mem_clients_normal,mem_cluster_links,
+        mem_aof_buffer,mem_replication_backlog,mem_total_replication_buffers,
+        mem_allocator,active_defrag_running,lazyfree_pending_objects,
+        lazyfreed_objects,create_time,update_time
+    </sql>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzq.redisv.mapper.ClientsMapper">
+
+    <resultMap id="BaseResultMap" type="com.lzq.redisv.domain.entity.Clients">
+            <id property="redisId" column="redis_id" jdbcType="INTEGER"/>
+            <result property="connectedClients" column="connected_clients" jdbcType="VARCHAR"/>
+            <result property="clusterConnections" column="cluster_connections" jdbcType="VARCHAR"/>
+            <result property="maxclients" column="maxclients" jdbcType="VARCHAR"/>
+            <result property="clientRecentMaxInputBuffer" column="client_recent_max_input_buffer" jdbcType="VARCHAR"/>
+            <result property="clientRecentMaxOutputBuffer" column="client_recent_max_output_buffer" jdbcType="VARCHAR"/>
+            <result property="blockedClients" column="blocked_clients" jdbcType="VARCHAR"/>
+            <result property="trackingClients" column="tracking_clients" jdbcType="VARCHAR"/>
+            <result property="clientsInTimeoutTable" column="clients_in_timeout_table" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        redis_id,connected_clients,cluster_connections,
+        maxclients,client_recent_max_input_buffer,client_recent_max_output_buffer,
+        blocked_clients,tracking_clients,clients_in_timeout_table,
+        create_time,update_time
+    </sql>
+</mapper>

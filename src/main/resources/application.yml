@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: dev
+#如果需要启动线程池，打开下面代码
+#executor:
+#  use: true

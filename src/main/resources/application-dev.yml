@@ -1,0 +1,71 @@
+#====================================================
+#                   通用服务
+#====================================================
+server:
+  port: 7005
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: springboot-demo
+    version: 1.0.0
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/redis-web-view?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 40
+      max-wait: 60
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      #      validation-query: SELECT 1
+      validation-query: select version()
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # oracle为true,mysql建议false   #PSCache 相关
+      pool-prepared-statements: false
+      # oracle可设置100,mysql建议-1 #PSCache 相关
+      max-pool-prepared-statement-per-connection-size: -1
+      use-global-data-source-stat: true
+
+  # redis 配置
+  redis:
+    # 地址
+    host: 192.168.137.131
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码
+    password:
+    # 连接超时时间
+    timeout: 10s
+    lettuce:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池的最大数据库连接数
+        max-active: 8
+        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations:
+    - classpath*:mapper/**/*.xml
+
+logging:
+  config: classpath:log/logback-dev.xml
+  level:
+    root: info
+
