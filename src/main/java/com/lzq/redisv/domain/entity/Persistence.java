@@ -74,7 +74,7 @@ public class Persistence implements Serializable {
     /**
      * 
      */
-    private Date rdbLastSaveTime;
+    private Integer rdbLastSaveTime;
 
     /**
      * 
@@ -84,12 +84,12 @@ public class Persistence implements Serializable {
     /**
      * 
      */
-    private Date rdbLastBgsaveTimeSec;
+    private String rdbLastBgsaveTimeSec;
 
     /**
      * 
      */
-    private Date rdbCurrentBgsaveTimeSec;
+    private String rdbCurrentBgsaveTimeSec;
 
     /**
      * 
@@ -124,12 +124,12 @@ public class Persistence implements Serializable {
     /**
      * 
      */
-    private Date aofLastRewriteTimeSec;
+    private String aofLastRewriteTimeSec;
 
     /**
      * 
      */
-    private Date aofCurrentRewriteTimeSec;
+    private String aofCurrentRewriteTimeSec;
 
     /**
      * 
@@ -204,7 +204,7 @@ public class Persistence implements Serializable {
     /**
      * 
      */
-    private Date loadingStartTime;
+    private String loadingStartTime;
 
     /**
      * 

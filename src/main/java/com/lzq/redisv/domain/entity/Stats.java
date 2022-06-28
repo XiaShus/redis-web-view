@@ -109,7 +109,7 @@ public class Stats implements Serializable {
     /**
      * 
      */
-    private Date expiredTimeCapReachedCount;
+    private String expiredTimeCapReachedCount;
 
     /**
      * 
@@ -129,12 +129,12 @@ public class Stats implements Serializable {
     /**
      * 
      */
-    private Date totalEvictionExceededTime;
+    private String totalEvictionExceededTime;
 
     /**
      * 
      */
-    private Date currentEvictionExceededTime;
+    private String currentEvictionExceededTime;
 
     /**
      * 
@@ -199,12 +199,12 @@ public class Stats implements Serializable {
     /**
      * 
      */
-    private Date totalActiveDefragTime;
+    private String totalActiveDefragTime;
 
     /**
      * 
      */
-    private Date currentActiveDefragTime;
+    private String currentActiveDefragTime;
 
     /**
      * 

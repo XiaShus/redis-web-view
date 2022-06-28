@@ -84,7 +84,7 @@ public class Server implements Serializable {
     /**
      * 
      */
-    private Integer runId;
+    private String runId;
 
     /**
      * 
@@ -94,17 +94,17 @@ public class Server implements Serializable {
     /**
      * 
      */
-    private Date serverTimeUsec;
+    private String serverTimeUsec;
 
     /**
      * 
      */
-    private Date uptimeInSeconds;
+    private String uptimeInSeconds;
 
     /**
      * 
      */
-    private Date uptimeInDays;
+    private String uptimeInDays;
 
     /**
      * 

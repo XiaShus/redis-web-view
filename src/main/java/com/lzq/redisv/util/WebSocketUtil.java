@@ -24,7 +24,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @date 2022/1/6 9:15
  */
 @Slf4j
-@ServerEndpoint(path = "/websocket", port = "8888")
+@ServerEndpoint(path = "/websocket", port = "7006")
 public class WebSocketUtil {
 
     private Session session;
@@ -130,8 +130,8 @@ public class WebSocketUtil {
      * @param mqId
      * @param msg
      */
-    public static void sendMessageByMqType(String mqId, String msg) {
-        List<WebSocketUtil> webSocketUtils = webSocketMap.get(mqId);
+    public static void sendMessageByRedisId(String redisId, String msg) {
+        List<WebSocketUtil> webSocketUtils = webSocketMap.get(redisId);
         if (CollectionUtil.isEmpty(webSocketUtils)) {
             return;
         }

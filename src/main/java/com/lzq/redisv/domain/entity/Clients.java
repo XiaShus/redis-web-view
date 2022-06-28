@@ -59,7 +59,7 @@ public class Clients implements Serializable {
     /**
      * 
      */
-    private Date clientsInTimeoutTable;
+    private String clientsInTimeoutTable;
 
     /**
      * 创建时间

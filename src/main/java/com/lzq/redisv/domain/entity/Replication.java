@@ -34,7 +34,7 @@ public class Replication implements Serializable {
     /**
      * 
      */
-    private Integer masterReplid;
+    private String masterReplid;
 
     /**
      * 
